@@ -1,0 +1,106 @@
+/* Contenedor General */
+.dashboard-wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Navbar Azul Superior */
+.main-navbar {
+    background-color: #0069d9; /* Azul intenso de la imagen */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Sección de Bienvenida */
+.dashboard-content {
+    padding: 20px 40px;
+}
+
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.welcome-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.role-text {
+    color: #333;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Botones de Acción (Amarillos) */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.btn-action, .btn-yellow {
+    background-color: #ffc107; /* Amarillo de la imagen */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-action:hover, .btn-yellow:hover {
+    background-color: #e0a800;
+}
+
+/* Botones de Cerrar Sesión (Rojos) */
+.btn-logout-nav {
+    background-color: #e4605e; /* Rojo suave de la nav */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-logout-main {
+    background-color: #dc3545; /* Rojo fuerte de la imagen */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-logout-main:hover {
+    background-color: #c82333;
+}
