@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useContext } from "react"; // 1. Agregado useContext
 import { AuthContext } from "./authContextInstance";
 
 const STORAGE_KEYS = Object.freeze({
@@ -8,7 +8,6 @@ const STORAGE_KEYS = Object.freeze({
 
 const parseStoredUser = (rawUser) => {
   if (!rawUser) return null;
-
   try {
     return JSON.parse(rawUser);
   } catch {
@@ -86,3 +85,12 @@ export function AuthProvider({ children }) {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
+
+
+export const useAuthContext = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuthContext debe ser usado dentro de un AuthProvider");
+  }
+  return context;
+};
